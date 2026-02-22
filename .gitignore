@@ -19,6 +19,10 @@ build/
 *.sqlite
 *.sqlite3
 
+# Generated files
+output_chart.html
+*.html
+
 # IDE
 .vscode/
 .idea/
