@@ -145,6 +145,19 @@ with st.sidebar:
     Powered by LangGraph + DeepSeek V3
     """)
     
+    # Workflow visualization
+    st.markdown("---")
+    with st.expander("📊 Workflow Diagram", expanded=False):
+        st.write("**How the system processes your question:**")
+        from langgraph_system import get_workflow_mermaid, visualize_workflow_ascii
+        
+        # Show ASCII diagram
+        st.code(visualize_workflow_ascii(), language=None)
+        
+        st.write("**Interactive Mermaid Diagram:**")
+        mermaid_code = get_workflow_mermaid()
+        st.markdown(f"```mermaid\n{mermaid_code}\n```")
+    
     # Debug section
     with st.expander("🔧 Debug Info"):
         api_key = st.session_state.get('api_key', 'NOT SET')
