@@ -1,0 +1,6 @@
+langchain==0.1.0
+langchain-openai==0.1.0
+langgraph==0.0.58
+pandas==2.0.0
+plotly==5.18.0
+streamlit==1.31.1
